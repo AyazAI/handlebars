@@ -1,0 +1,32 @@
+{{!-- {{> lovedChamps}} --}}
+{{!-- {{> hatedChamps}} --}}
+<h1>Dummy </h1>
+{{#if dummyExists}}
+
+<h1>Dummy is HERE</h1>
+{{#each dummy}}
+ {{@index}} . {{this}}
+{{/each}}
+
+{{/if}}
+
+{{#unless dummyExists}}
+<h1>Nothing Dummy
+</h1>
+{{/unless}}
+{{#with person }}
+{{person}}
+{{/with}}
+
+<ul>
+  {{#if listExists}}
+  <h1>New List</h1>
+  {{#each suggestedChamps}}
+  <li class={{this.lane}}>{{this.name}}</li>
+  {{/each}}
+  {{/if}}
+
+  {{#unless listExists}}
+  <h1>List Does Not Exists</h1>
+  {{/unless }}
+</ul>
